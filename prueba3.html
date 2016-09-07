@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>FUNDAMENTOS DE PHP</h1>
+	<H2>DEFINICION DE VARIABLES</H2>
+	<P>Se definen variables con $ por delante, Ejemplos</P>
+	<?php 
+		$numero=123;
+		$sotronum=100;
+		$cadena="cadena de texto";
+		$bandera=true;
+		$numdecimal=5.3;
+
+	?>
+	<p>La variable <strong>$numero</strong> tiene el valor <?= $numero ?></p>
+	<p>La variable <strong>$sotronum</strong> tiene el valor <?= $sotronum ?></p>
+	<p>La variable <strong>$cadena</strong> tiene el valor <?= $cadena ?></p>
+	<p>La variable <strong>$bandera</strong> tiene el valor <?= $bandera ?></p>
+
+	<h2>DEFINICION DECONSTANTES</h2>
+	<P>Para definir constantes utilizamos la funcion <strong>define</strong></P>
+	<?php
+		define("CARRERA", "SISTEMA");
+		define("GESTION", 2016);
+	?>
+
+	<P>El valor de carrera es: <?=CARRERA?></P>
+	<P>El valor de gestion es: <?=GESTION?></P>
+	<H2>FUNCIONES PREDEFINIDAS</H2>
+	<P>La version de php es <?php echo PHP_VERSION; ?></P>
+	<P>El archivo que se ejecuta es es <?php echo __FILE__; ?></P>
+	<H2>La funcion isset</H2>
+	<?php
+		$carnet="1234567";
+	?>
+	<p>Vamos a verificar si existe carnet</p>
+	<?php
+		if (isset($carnet)){
+			echo "<p>Esta definida y tiene valor".$carnet."</p>";
+		}
+		else{
+			echo "<p>No Esta definida</p>";
+		}
+	?>
+
+	<h2>OPÈRADOR TERNARIO</h2>
+	<?php 
+		$flag = true;
+ 	?>
+
+ 	<h2>COMANDOS SISTEMA OP</h2>
+ 	<?
+ 		$listado = shell_exec("dir");
+ 	?>
+ 	<p>Los archivos listados son:</p>
+ 	<p><?=$lisado ?></p>
+</body>
+</html>
